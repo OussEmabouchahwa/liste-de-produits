@@ -1,0 +1,18 @@
+<div class="product-card" [ngClass]="{'promo': price < 30}">
+  <img [src]="imageUrl" [alt]="name" width="150" />
+
+  <h3>{{ name }}</h3>
+  <p>
+    Prix : 
+    <span [ngStyle]="{'color': 'rgb(' + price + ',0,0)'}">
+      {{ price }} DT
+    </span>
+  </p>
+  <p>
+    @if (available === true) {
+      <span>Disponible</span>
+    } @else {
+      <span>Non disponible</span>
+    }
+  </p>
+</div>
